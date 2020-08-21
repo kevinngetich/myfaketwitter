@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		@media screen and (max-width: 1400px){
+			#main {
+				display: grid;
+				grid-template-columns: minmax(100px, 3fr) minmax(533px, 5fr) minmax(230px, 4fr); 
+				grid-template-rows: auto;
+				grid-template-areas: 
+					"a b c"
+					"a b c"
+					"a b c";
+				overflow: hidden;
+				width: 100vw;
+				height: 100vh;
+			}
+
+			@media screen and (max-width: 700px){
+				#main {
+					grid-template-columns: 1fr 5fr;
+					grid-template-rows: 1fr;
+					grid-template-areas:
+						"a b"
+						"a b"
+						"a b";
+					overflow: hidden;
+					width: 100vw;
+					height: 100vh;
+				}
+			}
+		}
+
+		
+
+		#main #a {
+			grid-area: a;
+			background-color: red;
+		}
+
+		#main #b {
+			grid-area: b;
+			background-color: green;
+		}
+
+		#main #c {
+			grid-area: c;
+			background-color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="a">
+			<!-- <p>asldfjalsdfj</p> -->
+		</div>
+		<div id="b">
+			<!-- <p>asdfasdf</p> -->
+		</div>
+		<div id="c">
+			<!-- <p>asdfasdf</p> -->
+		</div>
+	</div>
+</body>
+</html>
